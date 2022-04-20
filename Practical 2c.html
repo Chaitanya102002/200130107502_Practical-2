@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+ 
+<head> 
+ <title>Read Text File</title> 
+</head> 
+ <h1>Bhalodia Chaitanya (200130107502)</h1> 
+<p id="demo"></p> 
+<body> 
+ <input type="file" name="inputfile"  id="inputfile"> 
+ <br> 
+ 
+ <pre id="output"></pre> 
+ 
+ <script type="text/javascript">  document.getElementById('inputfile')  .addEventListener('change', function() { 
+ 
+ var fr=new FileReader();  fr.onload=function(){  document.getElementById('output') 
+ .textContent=fr.result; 
+ } 
+ 
+ fr.readAsText(this.files[0]); 
+ })  
+ var d = new Date(); 
+document.getElementById("demo").innerHTML = d; 
+ </script>
+
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<p id="demo"></p> <script> 
+window.onload = function () { var d = new Date(); 
+document.getElementById("demo").innerHTML = d; 
+var chart = new CanvasJS.Chart("chartContainer", { title:{ 
+text:"Simple Bar Chart " 
+}, 
+axisX:{ interval: 1 
+}, 
+axisY2:{ interlacedColor: "rgba(1,77,101,.1)", gridColor: "rgba(91,177,101,.1)", 
+title: "Number of Companies" 
+}, data: [{ 
+type: "bar", name: "companies", axisYType: "secondary", color: "#651901", dataPoints: [ { y: 1, label: "A" }, 
+{ y: 2, label: "B "}, 
+{ y: 3, label: "C" }, 
+] 
+}] }); chart.render(); } 
+</script> 
+</head> 
+<body> 
+<div id="chartContainer" style="height: 300px; width: 100%;"></div> 
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> 
+</body> 
+</html> 
+ 
+</table> 
+</body> 
+</html> 

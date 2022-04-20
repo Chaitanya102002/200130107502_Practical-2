@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>Practical 2B - Read Text File</title> 
+</head> 
+ <h1>Bhalodia Chaitanya (200130107502)</h1> 
+<p id="demo"></p> 
+<body> 
+ <input type="file" name="inputfile"  id="inputfile"> 
+ <br> 
+ <pre id="output"></pre> 
+ <script type="text/javascript">  document.getElementById('inputfile')  .addEventListener('change', function() { 
+ 
+ var fr=new FileReader();  fr.onload=function(){  document.getElementById('output') 
+ .textContent=fr.result; 
+ } 
+ fr.readAsText(this.files[0]); 
+ })  var d = new Date(); 
+document.getElementById("demo").innerHTML = d; 
+ </script> 
+ <table style="width:50%"> 
+ <tr> 
+ <th>Name</th> 
+ <th>Number</th> 
+ </tr> 
+ <tr> 
+ <td>A</td> 
+ <td>1</td> 
+ </tr> 
+ <tr> 
+ <td>B</td> 
+ <td>2</td> 
+ </tr> 
+ <tr>  <td>C</td> 
+ <td>3</td> 
+</table>
+</body>
+<html>
